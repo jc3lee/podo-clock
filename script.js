@@ -10,9 +10,9 @@ const sessionDecrement = document.getElementById("session-decrement")
 const sessionIncrement = document.getElementById("session-increment")
 const beep = document.getElementById("beep")
 
-document.addEventListener('contextmenu', function (event) {
-  event.preventDefault()
-}, true)
+document.addEventListener('contextmenu', e => {
+  e.preventDefault()
+}, false)
 
 let interval = null
 let breakTimer = 5, sessionTimer = 25, hasStarted = false,
