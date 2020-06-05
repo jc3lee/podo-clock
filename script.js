@@ -10,6 +10,11 @@ const sessionDecrement = document.getElementById("session-decrement")
 const sessionIncrement = document.getElementById("session-increment")
 const beep = document.getElementById("beep")
 
+let audio = new Audio("https://ljc-dev.github.io/testing0/public/pi.mp3")
+
+//detect mobile device for audio fix
+const isMobileDevice = () => (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+
 let interval = null
 let breakTimer = 5, sessionTimer = 25, hasStarted = false,
   isSession = true, timeLeft = 0, mouseDownCounter = 0, btnName = ""
@@ -28,6 +33,10 @@ const initAll = () => {
   timerLeft.innerText = getTimerString(sessionTimer * 60)
   breakLength.innerText = breakTimer
   sessionLength.innerText = sessionTimer
+  //reset color
+  if (timerLeft.classList.contains("active")) {
+    timerLeft.classList.remove("active")
+  }
   //reset beep
   resetBeep()
 }
@@ -90,13 +99,26 @@ const updateStartStop = () => {
 }
 
 const playBeep = () => {
-  beep.play()
-  setTimeout(resetBeep, 1300)
+  //check for mobile
+  if (isMobileDevice()) {
+    //play this audio instead of beep
+    audio.play()
+  } else {
+    beep.play()
+    setTimeout(resetBeep, 2900)
+  }
 }
 
 const resetBeep = () => {
-  beep.pause()
-  beep.currentTime = 0
+  //check for mobile
+  if (isMobileDevice()) {
+    // for mobile
+    audio.pause()
+    audio.currentTime = 0
+  } else {
+    beep.pause()
+    beep.currentTime = 0
+  }
 }
 
 //add hold down event
