@@ -110,19 +110,19 @@ body {
 .breakLength, .sessionLength {
   font-family: "clock";
   margin-bottom: 0.5rem;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   width: 70px;
   text-align: center;
 }
 
 .btnCounter {
   display: flex;
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
+  font-size: 1.55rem;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1.5rem;
   background: rgb(0, 20, 165);
   border: 2px solid #c0c0c0;
   color: #c0c0c0;
@@ -161,11 +161,11 @@ body {
     font-size: 1.75rem;
   }
   .breakLength, .sessionLength {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
   }
   .btnCounter {
-    width: 30px;
-    height: 30px;
-    font-size: 1.25rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
   }
 }
