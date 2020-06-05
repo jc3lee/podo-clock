@@ -8,12 +8,9 @@ const breakDecrement = document.getElementById("break-decrement")
 const breakIncrement = document.getElementById("break-increment")
 const sessionDecrement = document.getElementById("session-decrement")
 const sessionIncrement = document.getElementById("session-increment")
-// const beep = document.getElementById("beep")
+const beep = document.getElementById("beep")
 
 let audio = new Audio("https://ljc-dev.github.io/testing0/public/pi.mp3")
-
-//detect mobile device for audio fix
-const isMobileDevice = () => (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
 
 let interval = null
 let breakTimer = 5, sessionTimer = 25, hasStarted = false,
@@ -99,26 +96,17 @@ const updateStartStop = () => {
 }
 
 const playBeep = () => {
-  //check for mobile
-  audio.play()
-  if (isMobileDevice()) {
-    //play this audio instead of beep
-  } else {
-    // beep.play()
-    setTimeout(resetBeep, 2900)
-  }
+  // audio.play()
+  beep.play()
+  setTimeout(resetBeep, 2900)
 }
 
 const resetBeep = () => {
-  //check for mobile
-  audio.pause()
-  audio.currentTime = 0
-  if (isMobileDevice()) {
-    // for mobile
-  } else {
-    // beep.pause()
-    // beep.currentTime = 0
-  }
+  beep.pause()
+  beep.currentTime = 0
+  //for mobile
+  // audio.pause()
+  // audio.currentTime = 0
 }
 
 //add hold down event
