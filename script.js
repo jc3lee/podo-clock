@@ -8,7 +8,7 @@ const breakDecrement = document.getElementById("break-decrement")
 const breakIncrement = document.getElementById("break-increment")
 const sessionDecrement = document.getElementById("session-decrement")
 const sessionIncrement = document.getElementById("session-increment")
-const beep = document.getElementById("beep")
+// const beep = document.getElementById("beep")
 
 let audio = new Audio("https://ljc-dev.github.io/testing0/public/pi.mp3")
 
@@ -100,24 +100,24 @@ const updateStartStop = () => {
 
 const playBeep = () => {
   //check for mobile
+  audio.play()
   if (isMobileDevice()) {
     //play this audio instead of beep
-    audio.play()
   } else {
-    beep.play()
+    // beep.play()
     setTimeout(resetBeep, 2900)
   }
 }
 
 const resetBeep = () => {
   //check for mobile
+  audio.pause()
+  audio.currentTime = 0
   if (isMobileDevice()) {
     // for mobile
-    audio.pause()
-    audio.currentTime = 0
   } else {
-    beep.pause()
-    beep.currentTime = 0
+    // beep.pause()
+    // beep.currentTime = 0
   }
 }
 
