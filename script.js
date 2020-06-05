@@ -10,8 +10,6 @@ const sessionDecrement = document.getElementById("session-decrement")
 const sessionIncrement = document.getElementById("session-increment")
 const beep = document.getElementById("beep")
 
-let audio = new Audio("https://ljc-dev.github.io/testing0/public/pi.mp3")
-
 let interval = null
 let breakTimer = 5, sessionTimer = 25, hasStarted = false,
   isSession = true, timeLeft = 0, mouseDownCounter = 0, btnName = ""
@@ -96,7 +94,6 @@ const updateStartStop = () => {
 }
 
 const playBeep = () => {
-  // audio.play()
   beep.play()
   setTimeout(resetBeep, 2900)
 }
@@ -104,9 +101,6 @@ const playBeep = () => {
 const resetBeep = () => {
   beep.pause()
   beep.currentTime = 0
-  //for mobile
-  // audio.pause()
-  // audio.currentTime = 0
 }
 
 //add hold down event
@@ -157,6 +151,7 @@ sessionDecrement.addEventListener("mousedown", () => handleMouseDown("sessionDec
 sessionDecrement.addEventListener("mouseup", handleMouseUp)
 sessionIncrement.addEventListener("mousedown", () => handleMouseDown("sessionInc"))
 sessionIncrement.addEventListener("mouseup", handleMouseUp)
+
 //gesture hold down
 breakDecrement.addEventListener("touchstart", () => handleMouseDown("breakDec"))
 breakDecrement.addEventListener("touchend", handleMouseUp)
