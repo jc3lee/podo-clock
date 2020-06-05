@@ -3,23 +3,6 @@
   src: url("./public/fonts/alarm-clock.ttf");
 }
 
-@font-face {
-  font-family: "open";
-  src: url("./public/fonts/OpenSans-Regular.ttf");
-}
-
-@font-face {
-  font-family: "open";
-  font-weight: bold;
-  src: url("./public/fonts/OpenSans-Bold.ttf");
-}
-
-@font-face {
-  font-family: "open";
-  font-weight: 300;
-  src: url("./public/fonts/OpenSans-Light.ttf");
-}
-
 * {
   margin: 0;
   padding: 0;
