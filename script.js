@@ -57,7 +57,7 @@ const updateBigTimer = () => {
       isSession = !isSession
       playBeep()
     }
-    timerLabel.innerText = isSession ? "🖥️" : "😌"
+    timerLabel.innerText = isSession ? "🖥️" : "🍹"
     timeLeft = (isSession ? sessionTimer : breakTimer) * 60
   }
   timeLeft--

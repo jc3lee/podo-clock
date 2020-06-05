@@ -25,29 +25,28 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  user-select: none;
 }
 
 body {
   width: 100%;
   max-width: 640px;
-  height: 100vh;
   font-size: 18px;
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
   background: rgb(87, 190, 230);
 }
 
 .timerLabel {
   font-size: 6rem;
-  margin-bottom: 3rem;
+  margin: 2.5rem 0;
 }
 
 #timer-left {
   margin-bottom: 3rem;
-  font-size: 8rem;
+  font-size: 9rem;
   font-family: "clock";
   transition: color 0.3s;
 }
@@ -62,30 +61,29 @@ body {
   margin-bottom: 1rem;
 }
 
-#start_stop {
-  background: rgb(0, 0, 0);
+#start_stop, #reset {
   border: none;
-  border-radius: 5px 0 0 5px;
-  padding: 0.5rem 1rem;
-  color: #c0c0c0;
-  font-weight: bold;
-  cursor: pointer;
   text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.1rem;
 }
 
-#start_stop:hover, #start_stop:focus {
-  color: #dcdcdc;
+#start_stop {
+  background: rgb(0, 0, 0);
+  border-radius: 5px 0 0 5px;
+  color: #c0c0c0;
 }
 
 #reset {
   background: rgb(250, 40, 40);
-  border: none;
   border-radius: 0 5px 5px 0;
   color: #111;
-  font-weight: bold;
-  padding: 0.5rem 0.8rem;
-  cursor: pointer;
-  text-transform: uppercase;
+}
+
+#start_stop:hover, #start_stop:focus {
+  color: #dcdcdc;
 }
 
 #reset:hover, #reset:focus {
@@ -112,7 +110,7 @@ body {
 }
 
 #break-label, #session-label {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -131,7 +129,7 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   background: rgb(0, 20, 165);
   border: 2px solid #c0c0c0;
   color: #c0c0c0;
@@ -149,4 +147,32 @@ body {
 
 #break-increment, #session-increment {
   border-radius: 0 5px 5px 0;
+}
+
+/* I know, not mobile first xD  */
+
+@media(max-width: 500px) {
+  .timerLabel {
+    font-size: 4.5rem;
+    margin: 1.75rem 0;
+  }
+  #timer-left {
+    margin-bottom: 2rem;
+    font-size: 7rem;
+  }
+  #start_stop, #reset {
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+  }
+  #break-label, #session-label {
+    font-size: 1.75rem;
+  }
+  .breakLength, .sessionLength {
+    font-size: 2.25rem;
+  }
+  .btnCounter {
+    width: 30px;
+    height: 30px;
+    font-size: 1.25rem;
+  }
 }
