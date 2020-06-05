@@ -1,5 +1,5 @@
 const timerLabel = document.getElementById("timer-label")
-const timerLeft = document.getElementById("timer-left")
+const timerLeft = document.getElementById("time-left")
 const startStop = document.getElementById("start_stop")
 const reset = document.getElementById("reset")
 const breakLength = document.getElementById("break-length")
