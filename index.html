@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pororo Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1 id="timer-label" class="timerLabel"></h1>
+  <p id="timer-left"></p>
+  <div class="controls">
+    <button id="start_stop">Start / Stop</button>
+    <button id="reset">Reset</button>
+  </div>
+  <div class="settingsContainer">
+    <div class="settingsContainerMid">
+      <div class="settingsContainerIn">
+        <p id="break-label">😌</p>
+        <p class="breakLength" id="break-length"></p>
+      </div>
+      <div class="settingsContainerIn">
+        <button class="btnCounter" id="break-decrement">-</button>
+        <button class="btnCounter" id="break-increment">+</button>
+      </div>
+    </div>
+    <div class="settingsContainerMid">
+      <div class="settingsContainerIn">
+        <p id="session-label">🖥️</p>
+        <p class="sessionLength" id="session-length"></p>
+      </div>
+      <div class="settingsContainerIn">
+        <button class="btnCounter" id="session-decrement">-</button>
+        <button class="btnCounter" id="session-increment">+</button>
+      </div>
+    </div>
+  </div>
+  <audio id="beep" preload="auto">
+    <source src="https://ljc-dev.github.io/testing0/public/pi.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <!-- https://ljc-dev.github.io/testing0/public/pi.mp3 -->
+</body>
+
+</html>

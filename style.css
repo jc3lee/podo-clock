@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "clock";
+  src: url("./public/fonts/alarm-clock.ttf");
+}
+
+@font-face {
+  font-family: "open";
+  src: url("./public/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "open";
+  font-weight: bold;
+  src: url("./public/fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "open";
+  font-weight: 300;
+  src: url("./public/fonts/OpenSans-Light.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  max-width: 640px;
+  height: 100vh;
+  font-size: 18px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(87, 190, 230);
+}
+
+.timerLabel {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+}
+
+#timer-left {
+  margin-bottom: 3rem;
+  font-size: 8rem;
+  font-family: "clock";
+  transition: color 0.3s;
+}
+
+.active {
+  color: rgb(200, 0, 0);
+}
+
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 1rem;
+}
+
+#start_stop {
+  background: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 0.5rem 1rem;
+  color: #c0c0c0;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#start_stop:hover, #start_stop:focus {
+  color: #dcdcdc;
+}
+
+#reset {
+  background: rgb(250, 40, 40);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #111;
+  font-weight: bold;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#reset:hover, #reset:focus {
+  color: #000;
+}
+
+.settingsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.settingsContainerMid {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsContainerIn {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#break-label, #session-label {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.breakLength, .sessionLength {
+  font-family: "clock";
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  width: 70px;
+  text-align: center;
+}
+
+.btnCounter {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: rgb(0, 20, 165);
+  border: 2px solid #c0c0c0;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+
+.btnCounter:hover, .btnCounter:focus {
+  color: #d0d0d0;
+  border: 2px solid #d0d0d0;
+}
+
+#break-decrement, #session-decrement {
+  border-radius: 5px 0 0 5px;
+}
+
+#break-increment, #session-increment {
+  border-radius: 0 5px 5px 0;
+}
